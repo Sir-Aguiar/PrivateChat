@@ -1,0 +1,4 @@
+name: PrivateChat
+version: '${project.version}'
+main: com.aguiar.privatechat.PrivateChat
+api-version: '1.20'

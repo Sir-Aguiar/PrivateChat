@@ -18,7 +18,9 @@ public final class PrivateChat extends JavaPlugin {
             Bukkit.getPluginManager().disablePlugin(this);
             return;
         }
+
         Bukkit.getPluginManager().registerEvents(new ClearPlayerMessages(messageManager), this);
+
         Bukkit.getConsoleSender().sendMessage("[PrivateChat] - Enabled");
     }
 

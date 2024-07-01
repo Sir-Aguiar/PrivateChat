@@ -39,12 +39,12 @@ public class Reply implements CommandExecutor {
 
     UUID uuid = this.messageManager.getRecentMessages().get(player.getUniqueId());
 
-    if (Bukkit.getPlayer(uuid) == null) {
+    Player target = Bukkit.getPlayer(uuid);
+
+    if (target == null) {
       player.sendMessage(String.format("%sThe person you messaged is offline ", ChatColor.RED));
       return false;
     }
-
-    Player target = Bukkit.getPlayer(uuid);
 
     StringBuilder playersMessage = new StringBuilder();
 
